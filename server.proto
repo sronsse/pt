@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package server;
+
+service GameService {
+	rpc GetGameState(Empty) returns (GameState) {}
+}
+
+message Empty {}
+
+message GameState {
+	int32 state = 1;
+}
+
